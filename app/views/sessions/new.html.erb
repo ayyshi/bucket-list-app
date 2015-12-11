@@ -1,0 +1,17 @@
+<h1>The Bucket List App</h1>
+
+<div class="form">
+  <%= form_tag '/login' do %>
+    <p>
+      <%= text_field_tag :username, "username"%>
+    </p>
+    <p>
+      <%= password_field_tag :password, "password" %>
+    </p>
+    <p>
+      <%= submit_tag "Login" %>
+    </p>
+  <% end %>
+
+    <%= link_to "Sign Up", new_user_path %>
+</div>
