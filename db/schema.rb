@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151211164513) do
     t.string   "description"
     t.boolean  "completed",      default: false
     t.date     "date_completed"
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

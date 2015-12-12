@@ -7,6 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <% if current_user %>
+    <ul class="menu">
+      <li>Signed in as <%= current_user.username.upcase %></li>
+      <li><%= link_to "Home", users_path %></li>
+      <li><%= link_to "Your Lists", user_items_path(current_user) %></li>
+      <li><%= link_to "Create New Item", new_user_item_path(current_user) %></li>
+      <li><%= link_to "Edit Account", edit_user_path(current_user) %></li>
+      <li><%= link_to "Logout", logout_path %></li>
+    </ul>
+    <% else %>
+      <div>
+        <h3>Please Login</h3>
+      </div>
+    <% end %>
+  </nav>
 
 <%= yield %>
 

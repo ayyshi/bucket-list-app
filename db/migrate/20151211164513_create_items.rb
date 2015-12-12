@@ -6,7 +6,7 @@ class CreateItems < ActiveRecord::Migration
       t.boolean :completed, default: false
       t.date    :date_completed
 
-      t.references :users
+      t.references :user
 
       t.timestamps
     end

@@ -1,0 +1,10 @@
+<div class="users">
+  <h1>HI!!! HERE ARE YOUR FELLOW USERS!</h1>
+  <% @users.order("username ASC").each do |user| %>
+  <h2>
+    <a href="<%= user_items_path(user) %>">
+      <%= user.username.upcase %>
+    </a>
+  </h2>
+  <% end %>
+</div>
