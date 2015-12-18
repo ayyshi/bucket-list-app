@@ -14,7 +14,6 @@
       <p><%= item.description %></p>
       <p>Finished: <%= item.completed %></p>
       <p>Completed On: <%= item.date_completed %></p>
-      <%= item.user_id %>
 
       <% if item.user_id == current_user.id %>
         <p><%= link_to "edit", edit_user_item_path(current_user, item) %> <%= link_to "delete", user_item_path(current_user, item), method: :delete, data: {confirm: "Are you sure?"}%></p>

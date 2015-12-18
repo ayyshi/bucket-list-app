@@ -1,5 +1,5 @@
 <div class="users">
-  <h1>HI!!! HERE ARE YOUR FELLOW USERS!</h1>
+  <h1>Explore Someone Else's Bucket List</h1>
   <% @users.order("username ASC").each do |user| %>
   <h2>
     <a href="<%= user_items_path(user) %>">
